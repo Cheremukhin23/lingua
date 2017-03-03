@@ -31,6 +31,7 @@ let App = ({ loading, lists, children }) => (
 App = createContainer(() => {
   const listsHandle = Meteor.subscribe('lists');
   return {
+    // TODO: move container to ListLists because we don't need whole data subscription in the main component
     lists: Lists.find({}).fetch() || [],
     loading: !listsHandle.ready()
   }
