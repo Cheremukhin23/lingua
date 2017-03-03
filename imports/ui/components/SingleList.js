@@ -16,7 +16,7 @@ const SingleList = ({
   if (loading) return <p>Loading</p>;
 
   // TODO: render NoPageFound if !list return page not found
-  if (!list) return <div>It it not that list you are looking for</div>;
+  if (!list) return <div>It it not that list you are looking for...</div>;
 
   const listId = list._id;
   return (
